@@ -2,5 +2,5 @@
 .project
 .settings/
 build/
-WebContent/META-INF/
-WebContent/WEB-INF/
+WebContent/META-INF
+WebContent/WEB-INF
