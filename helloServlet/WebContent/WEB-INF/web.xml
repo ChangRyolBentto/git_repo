@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>helloServlet</display-name>
+  
+  <!-- 서블릿 등록 (xml 방식): HelloServlet 클래스의 @WebServlet("/HelloServlet")와 동일 기능 (톰켓이 알아서 처리해줌) -->
+  <!-- 그래서 굳이 아래 부분 안써줘도 됨.(나중에 스프링에선 자동 생성이 안되어서 써줘야하니까 미리 연습한거임) -->
+  <!-- @WebServlet 혹은 아래 부분 둘 중 한번만 써야 에러 안뜸 -->
+  <servlet>
+  	<!-- 서블릿 별명 지어주기 -->
+  	<servlet-name>HelloServlet</servlet-name>
+  	<!-- 자바에서 import 개념 -->
+  	<servlet-class>com.hello.HelloServlet</servlet-class> <!-- 맨 뒤에 .class 생략되어 있음 -->
+  </servlet>
+  <servlet-mapping>
+  	<!-- 위에서 지어준 별명과 똑같이 짓기 -->
+  	<servlet-name>HelloServlet</servlet-name>
+  	<!-- 웹주소에 /HelloServlet라고 기술하면 위의 com.hello.HelloServlet을 처리하겠다 -->
+  	<url-pattern>/HelloServlet</url-pattern>
+  </servlet-mapping>
+  
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
