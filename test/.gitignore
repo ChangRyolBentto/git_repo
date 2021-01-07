@@ -1,0 +1,6 @@
+WebContent/META-INF
+WebContent/WEB-INF
+build/
+.classpath
+.settings/
+.project
